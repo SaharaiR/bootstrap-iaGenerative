@@ -1,8 +1,26 @@
 // This file is intentionally left blank.
 // Write your custom JavaScript code here.
-var chartTab = document.getElementById('chart-tab');
-
 window.onload = function () {
+    // Get the download button
+    var downloadButton = document.getElementById('download');
+    // Add an event listener to the download button
+    downloadButton.addEventListener('click', function() {
+        // Get the canvas element
+        var canvas = document.getElementById('myChart');
+        // Create a new link element
+        var link = document.createElement('a');
+        // Set the link's href to the canvas data URL, in PNG format
+        link.href = canvas.toDataURL('image/png');
+        // Set the download attribute of the link
+        link.download = 'chart.png';
+        // Append the link to the body
+        document.body.appendChild(link);
+        // Simulate a click on the link
+        link.click();
+        // Remove the link from the body
+        document.body.removeChild(link);
+    });
+    var chartTab = document.getElementById('chart-tab');
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'bar',
