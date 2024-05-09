@@ -44,4 +44,6 @@ This file is the main HTML file of the project. It includes the necessary CSS an
 
 ### `README.md`
 
+Consulta: https://getbootstrap.com/docs/5.3/getting-started/introduction/#cdn-links
+
 This file contains the documentation for the project. It provides information about the project and how to use it.
